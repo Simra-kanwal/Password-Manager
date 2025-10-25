@@ -14,20 +14,20 @@ It lets you **save, edit, and delete passwords** securely with a clean and respo
 
 ## 🛠️ Tech Stack
 
-**Frontend:**  React, Tailwind CSS  
-**Backend:**   Node.js, Express.js  
-**Database:**  MongoDB  
+**Frontend:**   React, Tailwind CSS  
+**Backend:**    Node.js, Express.js  
+**Database:**   MongoDB  
 
 ## ⚙️ Setup Instructions
 
-### Clone the repository
+### 1. Clone the repository
 
 ```bash
 git clone https://github.com/Simra-kanwal/Password-Manager.git
 ```
 cd Password-Manager
 
-### Frontend setup
+### 2. Frontend setup
 ```bash
 npm install
 ```
@@ -35,7 +35,7 @@ npm install
 npm run dev
 ```
 
-### Backend setup
+### 3. Backend setup
 ```bash
 cd backend
 ```
@@ -46,9 +46,9 @@ npm install
 node --watch server.js
 ```
 
-### Connect to MongoDb
+### 4. Connect to MongoDb
 
-### Run the app
+### 5. Run the app
 Open the browser and go to
 ```bash
 http://localhost:5173
