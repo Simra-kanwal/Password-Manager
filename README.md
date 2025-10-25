@@ -21,21 +21,35 @@ It lets you **save, edit, and delete passwords** securely with a clean and respo
 ## ⚙️ Setup Instructions
 
 ### Clone the repository
+
 ```bash
 git clone https://github.com/Simra-kanwal/Password-Manager.git
+```
 cd Password-Manager
 
-2. Frontend setup
+### Frontend setup
+```bash
 npm install
+```
+```bash
 npm run dev
+```
 
-3. Backend setup
+### Backend setup
+```bash
 cd backend
+```
+```bash
 npm install
+```
+```bash
 node --watch server.js
+```
 
-4. Connect to MongoDb
+### Connect to MongoDb
 
-5. Run the app
+### Run the app
 Open the browser and go to
+```bash
 http://localhost:5173
+```
