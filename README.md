@@ -30,19 +30,13 @@ cd Password-Manager
 ### 2. Frontend setup
 ```bash
 npm install
-```
-```bash
 npm run dev
 ```
 
 ### 3. Backend setup
 ```bash
 cd backend
-```
-```bash
 npm install
-```
-```bash
 node --watch server.js
 ```
 
