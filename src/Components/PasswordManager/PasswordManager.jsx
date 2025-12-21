@@ -99,7 +99,7 @@ const PasswordManager = () => {
                 pauseOnHover
                 theme="dark"
             />
-            <div className='bg-green-50 pb-9'>
+            <div className='bg-green-50 pb-9  min-h-[92vh] dark:bg-gray-700 dark:text-white'>
 
                 <div className='text-center pt-9 w-[80vw] mx-auto'>
                     <div id="heading">
@@ -134,14 +134,14 @@ const PasswordManager = () => {
                                 placeholder='Enter Password'
                                 className='mt-7 w-full sm:mt-0 sm:w-[37%] px-3 py-2 rounded-2xl outline-none font-semibold border-2 border-green-500'
                             />
-                            <img src="eye.png"  ref={ref} alt="eye-icon" className='absolute right-2 bottom-2.5 cursor-pointer' width={23} onClick={showPassword} />
+                            <img src="eye.png"  ref={ref} alt="eye-icon" className='absolute right-2 bottom-2.5 cursor-pointer dark:invert' width={23} onClick={showPassword} />
                         </div>
                     </div>
 
                     <button
                         type='button'
                         onClick={handlePasswords}
-                        className="flex justify-center items-center gap-2 mt-7 bg-green-500 border-2 border-white text-white w-28 mx-auto cursor-pointer py-2 rounded-full hover:bg-green-400"
+                        className="flex justify-center items-center gap-2 mt-7 bg-green-500 border-2 border-white dark:border-none text-white w-28 mx-auto cursor-pointer py-2 rounded-full hover:bg-green-400"
                     >
                         <lord-icon
                             src="https://cdn.lordicon.com/jgnvfzqg.json"

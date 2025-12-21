@@ -46,7 +46,7 @@ const Passwords = ({ passwords, data, setData, setWebName, setUserName, setPassw
     return (
 
         <>
-            <div id="content" className="text-lg font-bold bg-green-100 flex justify-between items-center px-4 py-4 rounded min-w-[600px] md:min-w-full">
+            <div id="content" className="text-lg font-bold bg-green-100 flex justify-between items-center px-4 py-4 rounded min-w-[600px] md:min-w-full dark:text-black">
                 <div className='w-[40%] flex justify-center items-center gap-2'>
                     <h1><a href={`https://www.${webName}.com`} target='_blank'>{webName}</a></h1>
                     <img src="copy.svg" alt="copy-icon" style={{ width: '23px', height: '20px', cursor: 'pointer', marginLeft:"8px" }} onClick={(e) => handleCopy(webName, e)} />
