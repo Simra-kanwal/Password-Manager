@@ -20,7 +20,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className='flex justify-between px-20 items-center bg-indigo-950'>
+    <nav className='flex justify-between md:px-20 items-center bg-indigo-950 px-5'>
       <div className="logo px-4 py-3 font-bold cursor-pointer text-2xl text-white">
         <span className='text-green-500'>&lt;</span>Pass<span className='text-green-500'>OP/&gt;</span>
       </div>

@@ -46,29 +46,30 @@ const Passwords = ({ passwords, data, setData, setWebName, setUserName, setPassw
     return (
 
         <>
-            <div id="content" className="text-lg font-bold bg-green-100 flex justify-between items-center px-4 py-4 rounded min-w-[600px] md:min-w-full dark:text-black">
+            <div id="content" className="text-lg font-bold bg-green-100 dark:bg-[#243B55] dark:text-white flex justify-between items-center px-4 py-4 rounded min-w-[600px] md:min-w-full">
                 <div className='w-[40%] flex justify-center items-center gap-2'>
                     <h1><a href={`https://www.${webName}.com`} target='_blank'>{webName}</a></h1>
-                    <img src="copy.svg" alt="copy-icon" style={{ width: '23px', height: '20px', cursor: 'pointer', marginLeft:"8px" }} onClick={(e) => handleCopy(webName, e)} />
+                    <img src="copy.svg" alt="copy-icon" className='cursor-pointer dark:invert' style={{ width: '23px', height: '20px', marginLeft:"8px" }} onClick={(e) => handleCopy(webName, e)} />
                 </div>
 
                 <div className='w-[20%] flex justify-center items-center gap-2'>
                     <h1>{userName}</h1>
-                    <img src="copy.svg" alt="copy-icon" style={{ width: '23px', height: '20px', cursor: 'pointer', marginLeft:"8px"}} onClick={(e) => handleCopy(userName, e)} />
+                    <img src="copy.svg" className='cursor-pointer dark:invert' alt="copy-icon" style={{ width: '23px', height: '20px', marginLeft:"8px"}} onClick={(e) => handleCopy(userName, e)} />
                 </div>
 
                 <div className='w-[20%] flex justify-center items-center gap-2'>
                     <h1>{'*'.repeat(password.length)}</h1>
-                    <img src="copy.svg" alt="copy-icon" style={{ width: '23px', height: '20px', cursor: 'pointer', marginLeft:"8px" }} onClick={(e) => handleCopy(password, e)} />
+                    <img src="copy.svg" className='cursor-pointer dark:invert' alt="copy-icon" style={{ width: '23px', height: '20px', marginLeft:"8px" }} onClick={(e) => handleCopy(password, e)} />
                 </div>
 
                 <div className='w-[20%] flex justify-center gap-3' >
                     <div onClick={handleEdit}>
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" style={{ cursor: 'pointer' }} viewBox="0 -960 960 960" width="24px" fill="#46152F"><path d="M120-120v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm584-528 56-56-56-56-56 56 56 56Z" /></svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" className='dark:invert cursor-pointer' height="24px" viewBox="0 -960 960 960" width="24px" fill="#46152F"><path d="M120-120v-170l528-527q12-11 26.5-17t30.5-6q16 0 31 6t26 18l55 56q12 11 17.5 26t5.5 30q0 16-5.5 30.5T817-647L290-120H120Zm584-528 56-56-56-56-56 56 56 56Z" /></svg>
                     </div>
                     <lord-icon
                         src="https://cdn.lordicon.com/skkahier.json"
                         trigger="hover"
+                        className='dark:invert'
                         style={{ width: '25px', height: '25px', cursor: 'pointer' }}
                         onClick={handleRemoveItems}>
                     </lord-icon>

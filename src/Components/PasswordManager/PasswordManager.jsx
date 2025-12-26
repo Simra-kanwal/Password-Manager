@@ -7,6 +7,7 @@ const PasswordManager = () => {
     const [webName, setWebName] = useState("")
     const [userName, setUserName] = useState("")
     const [password, setPassword] = useState("")
+    const [search, setsearch] = useState('')
 
 
     //Stores all data
@@ -83,6 +84,15 @@ const PasswordManager = () => {
         }
     }
 
+    // searching for passwords
+    const displayed = search.trim() === '' ? data
+        : data.filter((item) => {
+            return (
+                item.webName.toLowerCase().includes(search.toLowerCase()) ||
+                item.userName.toLowerCase().includes(search.toLowerCase())
+            );
+        });
+
 
     return (
         <>
@@ -99,7 +109,8 @@ const PasswordManager = () => {
                 pauseOnHover
                 theme="dark"
             />
-            <div className='bg-green-50 pb-9  min-h-[92vh] dark:bg-gray-700 dark:text-white'>
+            {/* <div className='bg-[#b0f7d2] min-h-[92vh] dark:bg-gray-700 dark:text-white'> */}
+            <div className='bg-green-50 pb-9  min-h-[92vh] dark:bg-[#243B55] dark:text-white'>
 
                 <div className='text-center pt-9 w-[80vw] mx-auto'>
                     <div id="heading">
@@ -124,7 +135,7 @@ const PasswordManager = () => {
                                 type="text"
                                 value={userName}
                                 onChange={(e) => setUserName(e.target.value)}
-                                placeholder='UserName'
+                                placeholder='Enter UserName'
                                 className='w-full sm:w-[60%] px-3 py-2 rounded-2xl outline-none font-semibold border-2 border-green-500'
                             />
                             <input
@@ -153,11 +164,19 @@ const PasswordManager = () => {
 
                     {/* Passwords Section */}
                     <div className="lists text-start mt-5">
-                        <h1 className='text-2xl font-bold'> Your Passwords </h1>
-                        <div className={`${data.length === 0 ? 'block' : 'hidden'} mt-5`}>No Passwords</div>
+                        <div className="flex justify-between items-center flex-col gap-2 md:flex-row">
+                            <h1 className='text-2xl font-bold'> Your Passwords </h1>
+                            <input 
+                            value={search} 
+                            className='border-2 border-green-500 outline-none px-2 py-0.5 rounded' type="text" 
+                            placeholder="Search"
+                            onChange={(e) => setsearch(e.target.value)}
+                            />
+                        </div>
+                        <div className={`${displayed.length === 0 ? 'block' : 'hidden'} mt-5`}>No Passwords</div>
                     </div>
 
-                    <div className={`${data.length === 0 ? "hidden" : "block"}  mt-7`}>
+                    <div className={`${displayed.length === 0 ? "hidden" : "block"}  mt-7`}>
                         <div className="overflow-x-auto max-w-full">
                             <div className="header bg-green-700 text-white font-bold flex justify-between items-center px-4 py-2 rounded min-w-[600px] md:min-w-full">
                                 <h1 className="w-[40%]">Site</h1>
@@ -170,7 +189,7 @@ const PasswordManager = () => {
                     </div>
 
                     <div className='overflow-x-auto min-w-full'>
-                        {data.map((currElem) => {
+                        {displayed.map((currElem) => {
                             if (!currElem || !currElem.id) return null;
                             return <ul key={currElem.id}>
                                 <li>
