@@ -8,8 +8,9 @@ It lets you **save, edit, and delete passwords** securely with a clean and respo
 
 - ➕ Add, update, and delete passwords  
 - ⚡ Fast CRUD operations using Express & MongoDB  
-- 💻 Responsive and user-friendly interface  
-- ♻️ Built with reusable React components  
+- 💻 Responsive and user-friendly interface 
+- 🔎 Search passwords easily.
+- ⚡ Toggle Dark Mode for a better user experience. 
  
 
 ## 🛠️ Tech Stack
