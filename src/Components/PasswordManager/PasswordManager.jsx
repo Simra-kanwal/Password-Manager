@@ -93,7 +93,6 @@ const PasswordManager = () => {
             );
         });
 
-
     return (
         <>
             {/* React tostify */}
@@ -109,7 +108,6 @@ const PasswordManager = () => {
                 pauseOnHover
                 theme="dark"
             />
-            {/* <div className='bg-[#b0f7d2] min-h-[92vh] dark:bg-gray-700 dark:text-white'> */}
             <div className='bg-green-50 pb-9  min-h-[92vh] dark:bg-[#243B55] dark:text-white'>
 
                 <div className='text-center pt-9 w-[80vw] mx-auto'>
